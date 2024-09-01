@@ -47,3 +47,6 @@ font = cv2.FONT_HERSHEY_PLAIN
 for classInd, conf, boxes in zip(classIndex.flatten(), confidence.flatten(), bbox):
     cv2.rectangle(img3,boxes,(255,0,0),2)
     cv2.putText(img3,classLabels[classInd-1],(boxes[0]+10,boxes[1]+40),font,fontScale=font_scale,color=(0,255,0),thickness=3)
+
+plt.imshow(cv2.cvtColor(img3, cv2.COLOR_BGR2RGB))
+
